@@ -3,7 +3,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <meta name="csrf-token" content="{{ csrf_token() }}">
-<title>Album example for Bootstrap</title>
+<title>PDF Relation App</title>
 <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
 <!-- Custom styles for this template -->

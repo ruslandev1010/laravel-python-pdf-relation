@@ -43,14 +43,14 @@ $(document).ready(function(){
           processData: false,
           success: function(response){
               if(response != 0){
-                console.log("successed");
+               // console.log("successed");
                 restart();
               }else{
-                console.log("failed");
+               // console.log("failed");
               }
           },
           error: function(error) {
-            console.log('error');
+            //console.log('error');
           }
         });
     }else{
@@ -228,7 +228,7 @@ $(document).ready(function(){
         $('#linkModal').modal('show');
       },
       error: function(error) {
-        console.log('error');
+        //console.log('error');
       }
     });
   }
@@ -250,14 +250,14 @@ $(document).ready(function(){
       success: function(response) {
         $('#linkModal').modal('hide');
         if(response != 0) {
-          console.log("successed");
+         // console.log("success");
           restart();
         }else{
-          console.log("failed");
+         // console.log("failed");
         }
       },
       error: function(error) {
-        console.log('error');
+        //console.log('error');
       }
     });
   })
