@@ -61,4 +61,12 @@ html, body {
 .m-b-md {
     margin-bottom: 30px;
 }
+
+.node {}
+.link { stroke: #999; stroke-opacity: .6; stroke-width: 1px; }
+
+.standout {
+    background-color: #F2F2F2;
+}
+
 </style>

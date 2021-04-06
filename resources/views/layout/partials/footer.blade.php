@@ -1,4 +1,4 @@
-<footer class="footer mt-auto mx-3 fixed-bottom">
+<footer class="footer mt-auto px-3 fixed-bottom standout">
   <div class="row">
     <div class="col-4">
       @2021 Poilicy++. All Rights Reserved

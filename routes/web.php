@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\PDFRegisterController;
+use App\Http\Controllers\RelatedDocumentsController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +20,5 @@ use App\Http\Controllers\PDFRegisterController;
 Route::get('/', [PDFRegisterController::class, 'index']);
 //Route::get('/upload-file', [FileUploadController::class, 'createForm']);
 Route::post('/upload-file', [FileUploadController::class, 'fileUpload'])->name('fileUpload');
+Route::get('/related-document/{id}', [RelatedDocumentsController::class, 'getRelatedDocuments']);
+Route::post('/related-document', [RelatedDocumentsController::class, 'removeRelatedDocument']);
