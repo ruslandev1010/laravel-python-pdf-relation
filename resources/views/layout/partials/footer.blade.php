@@ -16,6 +16,7 @@
           Archive
         </div>
         <div class="col-4">
+          <a href="" id="pdflink" target="_blank" hidden>PDF OPEN</a>
         </div>
       </div>
     </div>

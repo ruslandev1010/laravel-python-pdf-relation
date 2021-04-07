@@ -133,6 +133,7 @@ $(document).ready(function(){
         .append("g")
         .attr("class", "node")
         .on("dblclick", dblclick)
+        .on("contextmenu", rightclick)
         .call(d3.drag()
                 .on("start", dragstarted)
                 .on("drag", dragged)
@@ -229,6 +230,24 @@ $(document).ready(function(){
       },
       error: function(error) {
         //console.log('error');
+      }
+    });
+  }
+
+  function rightclick(d) {
+    d3.event.preventDefault();
+    $.ajax({
+      type: "GET",
+      url: "/open/" + d.id,
+      success: function(data) {
+        console.log(data);
+        $('#pdflink').attr("href", data);
+        console.log($('#pdflink').attr("href"));
+        $('#pdflink')[0].click();
+        console.log('success');
+      },
+      error: function(error) {
+        console.log('error');
       }
     });
   }

@@ -17,6 +17,7 @@ class CreateUploadedPdfsTable extends Migration
             $table->id();
             $table->integer('documentID')->unique();
             $table->string('documentName')->unique();
+            $table->string('filePath')->unique();
             $table->timestamps();
         });
     }

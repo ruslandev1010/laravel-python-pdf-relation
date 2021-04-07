@@ -11,10 +11,6 @@ use App\Models\Relation;
 
 class FileUploadController extends Controller
 {
-    //
-    // public function createForm(){
-    //     return view('file-upload');
-    // }
 
     public function fileUpload(Request $req){
 
@@ -43,12 +39,14 @@ class FileUploadController extends Controller
                 $val = new UploadedPdf;
                 $val->documentID = $pdf_id;
                 $val->documentName = $origin_filename;
+                $val->filePath = $fileName;
                 $val->save();
             } else {
                 $pdf_maxid = Pdf::max('id') == null ? 0 : Pdf::max('id');
                 $val = new UploadedPdf;
                 $val->documentID = max($pdf_maxid + 1, $uppdf_maxid + 1);
                 $val->documentName = $origin_filename;
+                $val->filePath = $fileName;
                 $val->save();
             }
 
